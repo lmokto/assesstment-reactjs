@@ -24,7 +24,7 @@ const Avatar = (elems) => {
                             Friends
                         </Typography>
                         <ListItem>
-                            { elems.population.friends.map(name => (
+                            { elems.population.friends.slice(0, 4).map(name => (
                                 <ListItemText>{name}</ListItemText>
                             ))}
                         </ListItem>
@@ -32,7 +32,7 @@ const Avatar = (elems) => {
                             Professions
                         </Typography>              
                         <ListItem>
-                            { elems.population.professions.map(skill => (
+                            { elems.population.professions.slice(0, 4).map(skill => (
                                 <ListItemText>{skill}</ListItemText>
                             ))}
                         </ListItem>
