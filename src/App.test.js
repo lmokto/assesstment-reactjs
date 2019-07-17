@@ -1,6 +1,7 @@
 import {render} from '@testing-library/react'
 import Avatar from './components/Avatar';
 import PopulationList from './components/PopulationList';
+import NavBar from './components/NavBar';
 import React from 'react'
 
 
@@ -37,8 +38,5 @@ describe('Population and Avatar component renders the todo correctly', () => {
 
   });
 
-  it('Renders Population Component correctly', () => {
 
-  });
-  
 });
