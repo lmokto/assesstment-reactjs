@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Grid from '@material-ui/core/Grid'
-import Avatar from './Avatar'
+import Profile from './Avatar'
 import axios from 'axios';
 
 
@@ -18,7 +18,7 @@ class PopulationList extends Component {
         var self = this;
         axios.get('https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json')
         .then(function (response) {
-            self.setState({populations: response.data.Brastlewark})
+            self.setState({populations: response.data.Brastlewark.slice(0, 10)})
             console.log(self.state);
         })
         .catch(function (error) {
@@ -34,7 +34,7 @@ class PopulationList extends Component {
                         <Grid container spacing={24} style={{padding: 24}}>
                             { this.state.populations.map(avatar => (
                                 <Grid item xs={12} sm={6} lg={4} xl={3}>
-                                    <Avatar population={avatar} />
+                                    <Profile population={avatar} />
                                 </Grid>
                             ))}
                         </Grid>

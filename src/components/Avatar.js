@@ -1,4 +1,7 @@
 import React from 'react'
+
+/*
+
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
@@ -51,4 +54,35 @@ const Avatar = (elems) => {
         </div>
     )
 }
-export default Avatar
+*/
+
+class Avatar extends React.Component {
+
+    render() {
+        var styles = {
+            width: "600px",
+            height: "400px"
+        }
+        return (
+            <img className="Avatar"
+                src={this.props.thumbnail}
+                style={styles}
+            />
+        )
+    }
+}
+
+class Profile extends React.Component {
+
+    render() {
+        var details = this.props.population
+        return (
+            <article className="article">
+                <Avatar thumbnail={details.thumbnail}/>
+                <h2 className="article__title">{details.name}</h2>
+            </article>
+        )
+    }
+}
+
+export default Profile

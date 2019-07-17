@@ -3,7 +3,7 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 
-const NavBar = () => {
+const NavBarOld = () => {
     return(
         <div>
             <AppBar position="static">
@@ -16,4 +16,20 @@ const NavBar = () => {
         </div>
     )
 }
+
+class NavBar extends React.Component {
+    render() {
+        return (
+            <div>
+                <header>
+                    <div>
+                        <h2>{this.props.title}</h2>
+                    </div>
+                </header>
+            </div>
+        )
+    }
+}
+
+
 export default NavBar;
