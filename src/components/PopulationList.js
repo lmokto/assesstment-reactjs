@@ -29,14 +29,12 @@ class PopulationList extends Component {
         return (
             <div>
                 {this.state.populations ? (
-                    <div>
-                        <div className="card-container">
-                            { this.state.populations.map(avatar => (
-                                <div className="card-profile">
-                                    <Profile population={avatar} />
-                                </div>
-                            ))}
-                        </div>
+                    <div className="card-container">
+                        { this.state.populations.map(avatar => (
+                            <div className="responsive">
+                                <Profile population={avatar} />
+                            </div>
+                        ))}
                     </div>
                 ) : "No populations found" }
             </div>
