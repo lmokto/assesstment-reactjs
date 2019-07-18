@@ -6,7 +6,7 @@ class NavBar extends React.Component {
             <div>
                 <header>
                     <div>
-                        <h2>{this.props.title}</h2>
+                        <h2 className='title-navbar'>{this.props.title}</h2>
                     </div>
                 </header>
             </div>

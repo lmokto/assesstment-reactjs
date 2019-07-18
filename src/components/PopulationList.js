@@ -26,11 +26,11 @@ class PopulationList extends Component {
     }
 
     render() {
-        return (
+        return (  //   { friends.map((friend,i) => <li key={i}>{friend}</li>) }
             <div>
                 {this.state.populations ? (
                     <div className="card-container">
-                        { this.state.populations.map(avatar => (
+                        { this.state.populations.map((avatar,i) => (
                             <div className="responsive">
                                 <Profile population={avatar} />
                             </div>

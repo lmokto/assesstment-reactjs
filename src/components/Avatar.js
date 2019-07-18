@@ -5,7 +5,7 @@ class Professions extends React.Component {
     render() {
         var jobs = this.props.jobs;
         return (
-            <div>
+            <div className="profile">
                 <p>Jobs</p>
                 <ul>
                     { jobs.map((item,i) => <li key={i}>{item}</li>) }
@@ -21,7 +21,7 @@ class Friends extends React.Component {
     render() {
         var friends = this.props.friends;
         return (
-            <div>
+            <div className="profile">
                 <p>Friends</p>
                 <ul>
                     { friends.map((friend,i) => <li key={i}>{friend}</li>) }
@@ -37,7 +37,7 @@ class Aspect extends React.Component {
     render() {
         var look = this.props.look;
         return (
-            <div>
+            <div className="profile">
                 <p>Aspect</p>
                 <ul>
                     <li>Age: {look.age}</li>

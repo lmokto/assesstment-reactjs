@@ -4,6 +4,19 @@ body {
   font-family: sans-serif;
 }
 
+.profile {
+  font-size: 15px;
+}
+
+.title {
+  font-size: 18px;
+  font-family: Arial;
+}
+
+.title-navbar {
+  padding-left: 18px;
+}
+
 .responsive {
   padding: 0 6px;
   float: left;
