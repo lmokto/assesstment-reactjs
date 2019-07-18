@@ -43,30 +43,15 @@ class Aspect extends React.Component {
                     <li>Age: {look.age}</li>
                     <li>Height: {look.height}</li>
                     <li>Weight: {look.weight}</li>
-                    <li>Hair Color: {look.hair_color}</li>
+                    <li>Hair Color: {look.hair_color}</li>  
                 </ul>
             </div>
         )
     }
 }
 
-class About extends React.Component {
-
-    render() {
-        return (
-            <h2 className="title">{this.props.name}</h2>
-        )
-    }
-}
-
-class Avatar extends React.Component {
-
-    render() {
-        return (
-            <img className="avatar" src={this.props.thumbnail} />
-        )
-    }
-}
+const Avatar = (props) => (<img className="avatar" src={props.thumbnail} />)
+const About = (props) => (<h2 className="title">{props.name}</h2>)
 
 class Profile extends React.Component {
 
