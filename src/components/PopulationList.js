@@ -17,7 +17,7 @@ class PopulationList extends Component {
         var self = this;
         axios.get('https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json')
         .then(function (response) {
-            self.setState({populations: response.data.Brastlewark.slice(0, 10)})
+            self.setState({populations: response.data.Brastlewark.slice(0, 100)})
             console.log(self.state);
         })
         .catch(function (error) {

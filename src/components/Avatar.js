@@ -3,12 +3,14 @@ import React from 'react'
 class Professions extends React.Component {
 
     render() {
+        var jobs = this.props.jobs;
         return (
-            <li>
-                { this.props.jobs.map(function(job, i){
-                    <ul>{job}</ul>
-                })}
-            </li>
+            <div>
+                <p>Jobs</p>
+                <ul>
+                    { jobs.map((item,i) => <li key={i}>{item}</li>) }
+                </ul>
+            </div>
         )
     }
 }
@@ -17,12 +19,14 @@ class Professions extends React.Component {
 class Friends extends React.Component {
 
     render() {
+        var friends = this.props.friends;
         return (
-            <li>
-                { this.props.friends.map(function(friend, i){
-                    <ul>{friend}</ul>
-                })}
-            </li>
+            <div>
+                <p>Friends</p>
+                <ul>
+                    { friends.map((friend,i) => <li key={i}>{friend}</li>) }
+                </ul>
+            </div>
         )
     }
 }
@@ -33,12 +37,15 @@ class Aspect extends React.Component {
     render() {
         var look = this.props.look;
         return (
-            <li>
-                <ul>Age: {look.age}</ul>
-                <ul>Height: {look.height}</ul>
-                <ul>Weight: {look.weight}</ul>
-                <ul>Hair Color: {look.hair_color}</ul>
-            </li>
+            <div>
+                <p>Aspect</p>
+                <ul>
+                    <li>Age: {look.age}</li>
+                    <li>Height: {look.height}</li>
+                    <li>Weight: {look.weight}</li>
+                    <li>Hair Color: {look.hair_color}</li>
+                </ul>
+            </div>
         )
     }
 }
@@ -55,15 +62,8 @@ class About extends React.Component {
 class Avatar extends React.Component {
 
     render() {
-        var styles = {
-            width: "320px",
-            height: "240px"
-        }
         return (
-            <img className="Avatar"
-                src={this.props.thumbnail}
-                style={styles}
-            />
+            <img className="avatar" src={this.props.thumbnail} />
         )
     }
 }
