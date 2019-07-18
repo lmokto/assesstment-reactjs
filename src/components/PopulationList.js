@@ -18,7 +18,7 @@ class PopulationList extends Component {
         "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
       )
       .then(function(response) {
-        self.setState({ populations: response.data.Brastlewark.slice(0, 100) });
+        self.setState({ populations: response.data.Brastlewark });
         console.log(self.state);
       })
       .catch(function(error) {
